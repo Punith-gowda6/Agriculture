@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\PUNIAY\Desktop\Agriculture\project\Dealer"/>
+			<item value="C:\Users\PUNIAY\Desktop\Agriculture\project\Admin"/>
+			<item value="C:\Users\PUNIAY\Downloads\crop411111111111111111111111111111111111111111111111111111"/>
+			<item value="C:\Users\PUNIAY\Downloads\Crop"/>
+			<item value="C:\Users\PUNIAY\Downloads\crop4"/>
+			<item value="C:\Users\PUNIAY\Desktop\Agriculture\project\Farmer"/>
+			<item value="C:\Users\PUNIAY\Desktop\Agriculture\project\Gateway"/>
+			<item value="C:\Users\PUNIAY\Desktop\Agriculture"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

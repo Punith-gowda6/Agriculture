@@ -1,0 +1,3 @@
+server.port=8012
+spring.application.name=Dealer
+spring.data.mongodb.uri=mongodb+srv://power:power@cluster0.yfjow.mongodb.net/old-one?retryWrites=true&w=majority

@@ -1,0 +1,7 @@
+package com.example.casestudy.Farmer.resource;
+
+import java.util.Collection;
+
+public class user implements Collection<?> {
+
+}

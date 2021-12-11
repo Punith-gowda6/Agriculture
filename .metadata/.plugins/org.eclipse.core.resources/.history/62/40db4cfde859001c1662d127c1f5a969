@@ -1,0 +1,55 @@
+package com.example.casestudy.Farmer.resource;
+
+import java.util.Collection;
+
+public class user implements Collection<?> {
+	int id;
+	long phone;
+	String email;
+	String crop;
+	double rate;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public long getPhone() {
+		return phone;
+	}
+	public void setPhone(long phone) {
+		this.phone = phone;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getCrop() {
+		return crop;
+	}
+	public void setCrop(String crop) {
+		this.crop = crop;
+	}
+	public double getRate() {
+		return rate;
+	}
+	public void setRate(double rate) {
+		this.rate = rate;
+	}
+	@Override
+	public String toString() {
+		return "user [id=" + id + ", phone=" + phone + ", email=" + email + ", crop=" + crop + ", rate=" + rate + "]";
+	}
+	public user(int id, long phone, String email, String crop, double rate) {
+		super();
+		this.id = id;
+		this.phone = phone;
+		this.email = email;
+		this.crop = crop;
+		this.rate = rate;
+	}
+	
+	
+}

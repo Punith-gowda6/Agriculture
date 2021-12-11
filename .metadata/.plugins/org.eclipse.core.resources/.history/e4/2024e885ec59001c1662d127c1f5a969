@@ -1,0 +1,30 @@
+package com.example.casestudy.Farmer.resource;
+
+public class user {
+	int id;
+	String crop;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getCrop() {
+		return crop;
+	}
+	public void setCrop(String crop) {
+		this.crop = crop;
+	}
+	@Override
+	public String toString() {
+		return "user [id=" + id + ", crop=" + crop + "]";
+	}
+	public user(int id, String crop) {
+		super();
+		this.id = id;
+		this.crop = crop;
+	}
+	
+	
+
+}

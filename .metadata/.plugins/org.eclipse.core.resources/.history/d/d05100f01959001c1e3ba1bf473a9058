@@ -1,0 +1,16 @@
+package com.example.casestudy.Farmer.model;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.data.annotation.Id;
+
+public class FarmerData {
+	@Id
+	private int farmerid;
+	private String farmername;
+	private long phoneno;
+	private String farmeremail;
+	private Map<String,CropList> map1= new HashMap();
+	
+}

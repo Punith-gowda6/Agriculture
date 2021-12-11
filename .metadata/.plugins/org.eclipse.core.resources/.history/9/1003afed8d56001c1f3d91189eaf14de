@@ -1,0 +1,6 @@
+server:
+  port:8088
+zuul:
+  routes:
+    farmer-api:
+         url:http://localhost:8011

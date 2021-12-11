@@ -1,0 +1,12 @@
+server:
+  port:8088
+zuul:
+  routes:
+    farmer-api:
+         url:
+          http://localhost:8011
+
+          
+spring.cloud.gateway.routes[0].id=
+spring.cloud.gateway.routes[0].uri=http://localhost:2005/
+spring.cloud.gateway.routes[0].predicates[0]=Path=/employee/**

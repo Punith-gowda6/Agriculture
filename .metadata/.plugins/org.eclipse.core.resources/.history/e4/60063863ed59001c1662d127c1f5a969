@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_Letter" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="46c09ca9-3dc0-4d0b-8d29-d3fdc4a012d5">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="farmerid" class="java.lang.int"/>
+	<field name="crop" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="298" y="12" width="100" height="30" uuid="a32e84c9-d820-47a1-933a-3ef71a7ad243"/>
+				<text><![CDATA[Static Text]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="143" splitType="Stretch">
+			<textField>
+				<reportElement x="220" y="80" width="100" height="30" uuid="4d61ddb2-a0e6-4f3b-8680-5d596066c19f"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{crop}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="80" width="100" height="30" uuid="e5686e63-4f0b-462e-9dd1-73cc40a13074"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{farmerid}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="220" y="10" width="100" height="30" uuid="1686d239-9ddc-469a-8b23-7f7100d1a9ff"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[phone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="11" width="100" height="30" uuid="0a82333c-80d5-4905-9609-6d7a87a12687"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[NAME]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="70" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

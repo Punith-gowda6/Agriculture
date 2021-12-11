@@ -1,0 +1,65 @@
+package com.example.casestudy.Farmer.resource;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.casestudy.Farmer.model.Farmer;
+import com.example.casestudy.Farmer.repositry.FarmerRepository;
+
+@RestController
+@RequestMapping("/FARMER")
+public class FarmerResource {
+
+	@Autowired
+	private FarmerRepository farmerrepositry;
+
+	@PostMapping("/addfarmer")
+	public String saveFarmer(@RequestBody Farmer farmer) {
+		farmerrepositry.save(farmer);
+		return "Add farmer with id:" + farmer.getFarmerid();
+	}
+
+	@GetMapping("/findAllfarmer")
+	public List<Farmer> getFarmer() {
+		return farmerrepositry.findAll();
+	}
+
+	@GetMapping(value = "/byId/{farmerid}")
+	public Optional<Farmer> getFarmer(@PathVariable int farmerid) {
+		return farmerrepositry.findById(farmerid);
+	}
+
+	@GetMapping(value = "/byName/{farmername}")
+	public List<Farmer> getFarmer(@PathVariable String farmername) {
+		return farmerrepositry.findByFarmername(farmername);
+	}
+
+	
+	  @GetMapping(value = "/byLocation/{farmername}") public List<Farmer>
+	  getFarmerLoc(@PathVariable String farmername){ return
+	  farmerrepositry.findByFarmername(farmername); }
+	 
+
+	@DeleteMapping("/delete/{farmerid}")
+	public String delete(@PathVariable int farmerid) {
+		farmerrepositry.deleteById(farmerid);
+		return "book deleted with id : " + farmerid;
+	}
+
+	@PutMapping("/update/{farmerid}")
+	public String UpdateFarmer(@RequestBody Farmer farmer) {
+		farmerrepositry.save(farmer);
+		return "updated farmer " + farmer.getFarmerid();
+	}
+
+}

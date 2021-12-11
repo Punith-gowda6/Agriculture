@@ -1,0 +1,27 @@
+package com.example.casestudy.Admin.model;
+
+import java.util.List;
+
+public class FarmerDetails {
+	private List<Farmer> userfarmer;
+
+	public List<Farmer> getUserfarmer() {
+		return userfarmer;
+	}
+
+	public void setUserfarmer(List<Farmer> userfarmer) {
+		this.userfarmer = userfarmer;
+	}
+
+	public FarmerDetails(List<Farmer> userfarmer) {
+		super();
+		this.userfarmer = userfarmer;
+	}
+
+	public FarmerDetails() {
+		super();
+	}
+	
+	
+
+}

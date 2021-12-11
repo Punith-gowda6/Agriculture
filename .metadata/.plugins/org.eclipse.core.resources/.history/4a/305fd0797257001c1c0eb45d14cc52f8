@@ -1,0 +1,54 @@
+package com.example.casestudy.Farmer.resource;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.casestudy.Farmer.model.Farmer;
+import com.example.casestudy.Farmer.repositry.FarmerRepository;
+
+@RestController
+@RequestMapping("/FARMER")
+public class FarmerResource {
+	
+	@Autowired
+	private FarmerRepository farmerrepositry;
+	
+	@RequestMapping("/farmer")
+	public String getfarmer() {
+		return "Hello Farmer";
+	}
+    
+	@PostMapping("/addfarmer")
+	public String saveFarmer(@RequestBody Farmer farmer) {
+		farmerrepositry.save(farmer);
+		return "Add farmer with id:" + farmer.getFarmerid();
+	}
+	
+	@GetMapping("/findAllfarmer")
+		public List<Farmer> getFarmer(){
+		return farmerrepositry.findAll();
+	}
+	
+	@GetMapping("/findfarmer/{id}")
+	public Optional<Farmer> getFarmer(@PathVariable int farmerid){
+		return farmerrepositry.findById(farmerid);
+	}
+	
+	@DeleteMapping("/delete/{id}") 
+	public String delete(@PathVariable int id) {
+	  farmerrepositry.deleteById(id);
+	  return "book deleted with id : " + id; 
+	 }
+	
+}
+

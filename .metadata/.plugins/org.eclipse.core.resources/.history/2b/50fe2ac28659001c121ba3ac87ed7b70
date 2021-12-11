@@ -1,0 +1,74 @@
+package com.example.casestudy.Farmer.model2;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "FarmerData")
+public class FarmerData {
+	@Id
+	private int farmerid;
+	private String farmername;
+	private long phoneno;
+	private String farmeremail;
+	private location FarmerLocation;
+	private Map<String,CropList> map1= new HashMap();
+	
+	public int getFarmerid() {
+		return farmerid;
+	}
+	public void setFarmerid(int farmerid) {
+		this.farmerid = farmerid;
+	}
+	public String getFarmername() {
+		return farmername;
+	}
+	public void setFarmername(String farmername) {
+		this.farmername = farmername;
+	}
+	public long getPhoneno() {
+		return phoneno;
+	}
+	public void setPhoneno(long phoneno) {
+		this.phoneno = phoneno;
+	}
+	public String getFarmeremail() {
+		return farmeremail;
+	}
+	public void setFarmeremail(String farmeremail) {
+		this.farmeremail = farmeremail;
+	}
+	public location getFarmerLocation() {
+		return FarmerLocation;
+	}
+	public void setFarmerLocation(location farmerLocation) {
+		FarmerLocation = farmerLocation;
+	}
+	public Map<String, CropList> getMap1() {
+		return map1;
+	}
+	public void setMap1(Map<String, CropList> map1) {
+		this.map1 = map1;
+	}
+	@Override
+	public String toString() {
+		return "FarmerData [farmerid=" + farmerid + ", farmername=" + farmername + ", phoneno=" + phoneno
+				+ ", farmeremail=" + farmeremail + ", FarmerLocation=" + FarmerLocation + ", map1=" + map1 + "]";
+	}
+	public FarmerData(int farmerid, String farmername, long phoneno, String farmeremail, location farmerLocation,
+			Map<String, CropList> map1) {
+		super();
+		this.farmerid = farmerid;
+		this.farmername = farmername;
+		this.phoneno = phoneno;
+		this.farmeremail = farmeremail;
+		FarmerLocation = farmerLocation;
+		this.map1 = map1;
+	}
+	public FarmerData() {
+	}
+	
+	
+}

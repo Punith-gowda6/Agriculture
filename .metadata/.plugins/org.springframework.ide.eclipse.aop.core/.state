@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Admin"/>
+<aop-project name="eureka"/>
+<aop-project name="Farmer"/>
+<aop-project name="Dealer"/>
+<aop-project name="Crops"/>
+<aop-project name="TrainAvailability"/>
+<aop-project name="Gateway"/>
+</aop-reference-model>

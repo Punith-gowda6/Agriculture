@@ -1,0 +1,5 @@
+server.port=8013
+spring.application.name=Crop
+spring.data.mongodb.uri=mongodb+srv://shru_assign:shru@test.dbrev.mongodb.net/Crop?retryWrites=true&w=majority
+spring.data.mongodb.host=localhost
+spring.data.mongodb.database=FarmerDetails
