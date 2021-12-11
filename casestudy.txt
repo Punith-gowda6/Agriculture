@@ -1,0 +1,19 @@
+Former -
+
+1) Add Account
+		login()
+		signup()
+
+2) profile
+		showDetails()
+		edit()
+
+3) Add Crop
+		addCrop()
+		removeCrop()
+
+4) Bank	
+		addBankDetails()
+
+6)Recipt
+		generateRecipt()
